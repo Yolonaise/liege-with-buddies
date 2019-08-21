@@ -9,7 +9,7 @@ import { IMenu } from 'src/Interface/menu.interface';
 })
 export class MenuComponent implements OnInit {
 
-  protected menus: IMenu[] = [];
+  menus: IMenu[] = [];
 
   constructor(private appService: AppService) {
     appService.setMenu(this);
