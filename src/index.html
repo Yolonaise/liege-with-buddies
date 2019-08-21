@@ -1,6 +1,26 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+  <script lang="js">
+    const debounce = (fn) => {
+      let frame;
+      return (...params) => {
+        if (frame) {
+          cancelAnimationFrame(frame);
+        }
+        frame = requestAnimationFrame(() => {
+          fn(...params);
+        });
+
+      }
+    };
+    const storeScroll = () => {
+      document.documentElement.dataset.scroll = window.scrollY;
+    }
+    document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+    storeScroll();
+  </script>
   <meta charset="utf-8">
   <title>LiegeWithBuddies</title>
   <base href="/">
@@ -8,7 +28,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>

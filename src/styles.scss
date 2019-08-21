@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 3em;
+    background-color: transparent;
+}
+
+header ul li{
+    color: #eaeaea;
+}
+
+header {
+    box-sizing: border-box;
+    padding: 1em;
+    transition: background-color .5s;
+}
+
+header ul li{
+    transition: color .5s;
+}
+
+body {
+    margin: 0;
+}
+
+html:not([data-scroll='0']) {
+    header {
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    }
+
+    header ul li{
+        color: #343434
+    }
+}
