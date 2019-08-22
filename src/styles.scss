@@ -6,7 +6,15 @@ header {
     background-color: transparent;
 }
 
+header ul {
+    position: absolute;
+    left: 38%;
+    bottom: 15%;
+}
+
 header ul li{
+    font-family: 'Lexend Deca';
+    font-size: 1.5em;
     color: #eaeaea;
 }
 
@@ -18,6 +26,7 @@ header {
 
 header ul li{
     transition: color .5s;
+    transition: font-size .5s;
 }
 
 body {
@@ -33,6 +42,7 @@ html:not([data-scroll='0']) {
     }
 
     header ul li{
-        color: #343434
+        font-size: 1em;
+        color: #343434;
     }
 }
