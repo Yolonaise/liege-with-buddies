@@ -1,6 +1,21 @@
+$parallax-perspective: 8px;
+
+@function parallax-scale-factor($z-distance) {
+  @return ($parallax-perspective  -  $z-distance) / $parallax-perspective;
+}
+
 section {
+    transform: translateZ(0px);
     background: url('../../assets/home_bg.jpg');
     background-size: cover;
     height:100vh;
     width:100%;
+}
+
+.foreground {
+    background: url('../../assets/foreground_home_bg.png');
+    background-size: cover;
+    height:100vh;
+    width:100%;
+    transform: translateZ(3px) scale(1);
 }
