@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 
 import { AppService } from 'src/services/app.service';
 import { DummyComponent } from './dummy/dummy.component';
+import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DummyComponent } from './dummy/dummy.component';
     AppComponent,
     MenuComponent,
     HomeComponent,
-    DummyComponent
+    DummyComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule
