@@ -7,59 +7,77 @@ $parallax-perspective: 8px;
 }
 
 .layer {
-  background-size: auto;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   position: fixed;
   z-index: -1;
 }
 .layer1 {
-    background-position: bottom center;
     background: url('../../assets/home_bg.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
     width:100%;
-}
-
-.layer2 {
-    background-position: bottom center;
-    background: url('../../assets/title_foreground.png');
-    background-size: cover;
-    height:100vh;
-    width:100%;
-    opacity: 0.97;
-}
-
-.layer3 {
-    background-position: bottom center;
-    color: #353535;
-    font-family: 'Zilla Slab', serif;
-    text-shadow: 2px 3px #000000;
-    font-size: 2.5em;
-    width: 100%;
-    height: 100vh;
 }
 
 .layer4 {
-  color: #353535;
-  font-family: 'Zilla Slab', serif;
-  text-shadow: 2px 3px #000000;
-  font-size: 2.5em;
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 2em;
   width: 100%;
   height: 100vh;
 }
 
 .over-title{ 
+  background: #000000dd;
   position: fixed;
-  margin: auto;
-  top: 10%;
-  left: 10%;
+  bottom: 40%;
+  right: 3%;
+}
+
+.middle-title{
+  text-align: center;
+  position: fixed;
+  background: #000000dd;
+  bottom: 20%;
+  right: 3%;
 }
 
 .sub-title {
+  background: #000000dd;
   position: fixed;
   margin: auto;
-  top: 60%;
-  left: 50%;
+  bottom: 1%;
+  right: 3%;
 }
+
+.arrow_wrapper {
+  position: fixed;
+  width:60px; 
+  height:100px;
+  bottom: 0%;
+  left: 5%; 
+}
+
+.arrow_wrapper img {
+  position: absolute;
+  width: 60px; }
+
+.down_arrow {
+  bottom: 0px;
+  -webkit-animation: down1 3s linear infinite;
+  -moz-animation: down1 3s linear infinite;
+  animation:down1 3s linear infinite; 
+}
+
+@-webkit-keyframes down1 { 
+  0% { bottom: 0px; } 10%{ bottom: 5px; } 20%{ bottom: 0px; } 
+  30%{ bottom: 5px; } 40%{ bottom: 0px; } 100%{ bottom: 0px; } }
+@-moz-keyframes down1 { 
+  0% { bottom: 0px; } 10%{ bottom: 5px; } 20%{ bottom: 0px; }
+  30%{ bottom: 5px; } 40%{ bottom: 0px; } 100%{ bottom: 0px; } }
+@keyframes down1 { 
+  0% { bottom: 0px; } 10%{ bottom: 5px; } 20%{ bottom: 0px; }
+  30%{ bottom: 5px; } 40%{ bottom: 0px; } 100%{ bottom: 0px; } }
