@@ -13,7 +13,7 @@ export class TitleComponent extends JsLoader implements OnInit {
   }
 
   ngOnInit() {
-    this.loadScript('../assets/js/my-library.js');
+    //this.loadScript('../src/app/titile/title.effect.js');
   }
 
 }
