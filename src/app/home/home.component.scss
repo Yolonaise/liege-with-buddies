@@ -1,9 +1,5 @@
 $parallax-perspective: 8px;
 
-@function parallax-scale-factor($z-distance) {
-  @return ($parallax-perspective  -  $z-distance) / $parallax-perspective;
-}
-
 .main-container {
   height: 100vh;
   overflow: hidden;
@@ -11,7 +7,6 @@ $parallax-perspective: 8px;
 }
 
 .layer {
-  background-position: bottom center;
   background-size: auto;
   background-repeat: no-repeat;
   width: 100%;
@@ -20,7 +15,7 @@ $parallax-perspective: 8px;
   z-index: -1;
 }
 .layer1 {
-    transform: translateZ(0px);
+    background-position: bottom center;
     background: url('../../assets/home_bg.jpg');
     background-size: cover;
     height:100vh;
@@ -28,24 +23,43 @@ $parallax-perspective: 8px;
 }
 
 .layer2 {
-    background: url('../../assets/foreground_home_bg.png');
+    background-position: bottom center;
+    background: url('../../assets/title_foreground.png');
     background-size: cover;
     height:100vh;
     width:100%;
-    transform: translateZ(3px) scale(1);
+    opacity: 0.97;
 }
 
 .layer3 {
-    margin: 3em; 
-    color: #fefefe;
+    background-position: bottom center;
+    color: #353535;
     font-family: 'Zilla Slab', serif;
-    font-size: 2.7em;
-    height:100vh;
-    width:100%;
+    text-shadow: 2px 3px #000000;
+    font-size: 2.5em;
+    width: 100%;
+    height: 100vh;
 }
 
-.title {
-  position: absolute;
-  right: 0;
-  left: 0;
+.layer4 {
+  color: #353535;
+  font-family: 'Zilla Slab', serif;
+  text-shadow: 2px 3px #000000;
+  font-size: 2.5em;
+  width: 100%;
+  height: 100vh;
+}
+
+.over-title{ 
+  position: fixed;
+  margin: auto;
+  top: 10%;
+  left: 10%;
+}
+
+.sub-title {
+  position: fixed;
+  margin: auto;
+  top: 60%;
+  left: 50%;
 }
