@@ -1,7 +1,7 @@
 <header>
     <ul>
         <li *ngFor="let m of menus">
-            <a>{{ m.name }}</a>
+            <a (click)="scrollTo(m.htmlId)">{{ m.name }}</a>
         </li>
     </ul>
 </header>

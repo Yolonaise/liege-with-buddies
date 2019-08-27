@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AppService } from 'src/services/app.service';
 import { DummyComponent } from './dummy/dummy.component';
 import { TitleComponent } from './title/title.component';
+import { CitationComponent } from './citation/citation.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TitleComponent } from './title/title.component';
     MenuComponent,
     HomeComponent,
     DummyComponent,
-    TitleComponent
+    TitleComponent,
+    CitationComponent
   ],
   imports: [
     BrowserModule
