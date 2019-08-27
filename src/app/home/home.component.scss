@@ -1,5 +1,3 @@
-$parallax-perspective: 8px;
-
 .main-container {
   height: 100vh;
   overflow: hidden;
@@ -23,14 +21,14 @@ $parallax-perspective: 8px;
 }
 
 .layer4 {
-  color: white;
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 2em;
   width: 100%;
   height: 100vh;
 }
 
 .over-title{ 
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 100%;
   background: #000000dd;
   position: fixed;
   bottom: 40%;
@@ -38,6 +36,9 @@ $parallax-perspective: 8px;
 }
 
 .middle-title{
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 100%;
   text-align: center;
   position: fixed;
   background: #000000dd;
@@ -46,6 +47,9 @@ $parallax-perspective: 8px;
 }
 
 .sub-title {
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 100%;
   background: #000000dd;
   position: fixed;
   margin: auto;
@@ -53,31 +57,12 @@ $parallax-perspective: 8px;
   right: 3%;
 }
 
-.arrow_wrapper {
+.arrow {
+  text-align: center;
+  background: #000000dd;
   position: fixed;
-  width:60px; 
-  height:100px;
-  bottom: 0%;
-  left: 5%; 
+  bottom: 3%;
+  left: 10%;
+  height: 7vh;
+  width: 7vh;
 }
-
-.arrow_wrapper img {
-  position: absolute;
-  width: 60px; }
-
-.down_arrow {
-  bottom: 0px;
-  -webkit-animation: down1 3s linear infinite;
-  -moz-animation: down1 3s linear infinite;
-  animation:down1 3s linear infinite; 
-}
-
-@-webkit-keyframes down1 { 
-  0% { bottom: 0px; } 10%{ bottom: 5px; } 20%{ bottom: 0px; } 
-  30%{ bottom: 5px; } 40%{ bottom: 0px; } 100%{ bottom: 0px; } }
-@-moz-keyframes down1 { 
-  0% { bottom: 0px; } 10%{ bottom: 5px; } 20%{ bottom: 0px; }
-  30%{ bottom: 5px; } 40%{ bottom: 0px; } 100%{ bottom: 0px; } }
-@keyframes down1 { 
-  0% { bottom: 0px; } 10%{ bottom: 5px; } 20%{ bottom: 0px; }
-  30%{ bottom: 5px; } 40%{ bottom: 0px; } 100%{ bottom: 0px; } }
