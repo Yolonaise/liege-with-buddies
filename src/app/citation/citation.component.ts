@@ -18,4 +18,8 @@ export class CitationComponent implements OnInit, IMenu {
   ngOnInit() {
     this.appService.addFeature(this);
   }
+
+  onScroll(event: Event) {
+    console.log(event);
+  }
 }
