@@ -10,6 +10,7 @@ import * as uuid from 'uuid';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, IMenu {
+  loaded: boolean = false;
   htmlId: string = uuid.v4();
   @Input() name: string;
 
@@ -19,4 +20,8 @@ export class HomeComponent implements OnInit, IMenu {
   ngOnInit() {
     this.appService.addFeature(this);
   }
+
+  ngAfterViewInit(){
+    this.appService.featureLoaded(this)
+  }  
 }

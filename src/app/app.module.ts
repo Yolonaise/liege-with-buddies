@@ -9,6 +9,7 @@ import { AppService } from 'src/services/app.service';
 import { DummyComponent } from './dummy/dummy.component';
 import { TitleComponent } from './title/title.component';
 import { CitationComponent } from './citation/citation.component';
+import { PreloadingComponent } from './preloading/preloading.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CitationComponent } from './citation/citation.component';
     HomeComponent,
     DummyComponent,
     TitleComponent,
-    CitationComponent
+    CitationComponent,
+    PreloadingComponent
   ],
   imports: [
     BrowserModule

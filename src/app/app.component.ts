@@ -11,7 +11,7 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'liege-with-buddies';
   
-  constructor(private appService: AppService) {
+  constructor(public appService: AppService) {
   }
 
   ngOnInit() {

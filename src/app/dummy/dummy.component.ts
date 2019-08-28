@@ -11,6 +11,7 @@ import * as uuid from 'uuid';
   styleUrls: ['./dummy.component.scss']
 })
 export class DummyComponent implements OnInit, IMenu {
+  loaded: boolean = false;
   htmlId: string = uuid.v4();
   @Input() name: string;
 
@@ -19,5 +20,9 @@ export class DummyComponent implements OnInit, IMenu {
 
   ngOnInit() {
     this.appService.addFeature(this);
+  }
+
+  ngAfterViewInit(){
+    this.appService.featureLoaded(this)
   }
 }
