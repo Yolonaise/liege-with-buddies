@@ -33,11 +33,11 @@ export class MenuComponent implements OnInit {
     this.menus.push(m);
   }
 
-  scrollTo(id: string){
+  scrollTo(id: string) {
     let element = document.getElementById(id);
-    if(element === undefined)
+    if (element === undefined)
       return;
 
-    element.scrollIntoView({behavior: 'smooth', block: "start" });
+    element.scrollIntoView({ behavior: 'smooth', block: "start" });
   }
 }

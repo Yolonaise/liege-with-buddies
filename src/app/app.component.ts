@@ -10,7 +10,7 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'liege-with-buddies';
-  
+
   constructor(public appService: AppService) {
   }
 

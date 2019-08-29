@@ -1,18 +1,18 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IMenu } from 'src/Interface/menu.interface';
 
 import * as uuid from 'uuid';
 import { AppService } from 'src/services/app.service';
 
 @Component({
-  selector: 'app-citation',
-  templateUrl: './citation.component.html',
-  styleUrls: ['./citation.component.scss']
+  selector: 'app-ourjob',
+  templateUrl: './ourjob.component.html',
+  styleUrls: ['./ourjob.component.scss']
 })
-export class CitationComponent implements OnInit, IMenu {
+export class OurjobComponent implements OnInit, IMenu {
+  htmlId: string = uuid.v4();
+  name: string = "Our Job";
   loaded: boolean = false;
-  htmlId: string = uuid.v4();;
-  name: string = "Liege";
 
   constructor(private appService: AppService) { }
 

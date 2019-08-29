@@ -3,6 +3,7 @@ import { IMenu } from 'src/Interface/menu.interface';
 import { AppService } from 'src/services/app.service';
 
 import * as uuid from 'uuid';
+import { delay } from 'q';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,9 @@ export class HomeComponent implements OnInit, IMenu {
     this.appService.addFeature(this);
   }
 
-  ngAfterViewInit(){
-    this.appService.featureLoaded(this)
-  }  
+  ngAfterViewInit() {
+    delay(2000).then(() => {
+      this.appService.featureLoaded(this);
+    });
+  }
 }

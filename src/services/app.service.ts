@@ -1,10 +1,14 @@
 import { MenuComponent } from 'src/app/menu/menu.component';
 import { IMenu } from 'src/Interface/menu.interface';
+import { Injectable } from '@angular/core';
 
-
+@Injectable()
 export class AppService {
     private menu: MenuComponent = undefined;
-    public allLaoded: boolean = false;
+    state = {
+        allLaoded: false
+    }
+
     constructor() {
 
     }
@@ -23,21 +27,19 @@ export class AppService {
         this.menu.add(m);
     }
 
-    featureLoaded(m: IMenu){
-        if(this.menu == undefined)
+    featureLoaded(m: IMenu) {
+        if (this.menu == undefined)
             return;
-        if(m == undefined)
+        if (m == undefined)
             return;
 
         m.loaded = true;
         console.log(m.name + ' is loaded');
         let tmp = true;
         this.menu.menus.forEach(m => {
-            tmp = !m.loaded ? false : this.allLaoded;
+            tmp = !m.loaded ? false : tmp;
         });
 
-        this.allLaoded = tmp;
-        if(this.allLaoded)
-            console.log('all component are loaded');
+        this.state.allLaoded = tmp;
     }
 }

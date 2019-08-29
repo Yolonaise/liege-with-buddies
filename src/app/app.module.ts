@@ -9,7 +9,7 @@ import { AppService } from 'src/services/app.service';
 import { DummyComponent } from './dummy/dummy.component';
 import { TitleComponent } from './title/title.component';
 import { CitationComponent } from './citation/citation.component';
-import { PreloadingComponent } from './preloading/preloading.component';
+import { OurjobComponent } from './ourjob/ourjob.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { PreloadingComponent } from './preloading/preloading.component';
     DummyComponent,
     TitleComponent,
     CitationComponent,
-    PreloadingComponent
+    OurjobComponent
   ],
   imports: [
     BrowserModule
