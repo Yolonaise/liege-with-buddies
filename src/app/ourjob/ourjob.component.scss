@@ -2,8 +2,69 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    text-align: center;
-    color: #686868;
+    background: #919da2
+}
+
+.content {
+    width: 100%;
+    top: 20%;
+    position: absolute;
+    color: #313131;
     font-family: 'Lexend Deca', sans-serif;
-    background: #e4e3e3
+    font-weight: bolder,
+}
+
+.cloud {
+    position: relative;
+    height: 100%;
+    background: url('../../assets/cloud.png');
+    background-position: top;
+    background-clip: content-box; 
+    background-repeat: no-repeat;
+    top: 0%;
+}
+
+.main-title{
+    text-align: center;
+    color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+    padding-top: 2%;
+    font-size: 3em;
+    text-shadow: 2px 2px 6px #313131;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 70vh;
+    width: 40%;
+}
+
+.left {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url('../../assets/left.png');
+    background-position: bottom;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 70vh;
+    width: 40%;
+}
+
+.right {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url('../../assets/right.png');
+    background-position: bottom;
+    background-clip: border-box;
+    background-repeat: no-repeat;
 }
