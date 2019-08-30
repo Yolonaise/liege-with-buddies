@@ -1,16 +1,15 @@
 import { MenuComponent } from 'src/app/menu/menu.component';
 import { IMenu } from 'src/Interface/menu.interface';
 import { Injectable } from '@angular/core';
+import { IScrollListener } from 'src/Interface/scrolllistener.interface';
 
 @Injectable()
 export class AppService {
     private menu: MenuComponent = undefined;
-    state = {
-        allLaoded: false
-    }
+    private allLaoded: boolean;
 
     constructor() {
-
+        this.allLaoded = false;
     }
 
     setMenu(menu: MenuComponent) {
@@ -30,16 +29,21 @@ export class AppService {
     featureLoaded(m: IMenu) {
         if (this.menu == undefined)
             return;
+
         if (m == undefined)
             return;
 
         m.loaded = true;
-        console.log(m.name + ' is loaded');
+
         let tmp = true;
         this.menu.menus.forEach(m => {
             tmp = !m.loaded ? false : tmp;
         });
 
-        this.state.allLaoded = tmp;
+        this.allLaoded = tmp;
+    }
+
+    notifyFeatureOnScreen(sl: IScrollListener) {
+        this.menu.isOnScreen(sl);
     }
 }

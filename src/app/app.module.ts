@@ -4,12 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
-
-import { AppService } from 'src/services/app.service';
-import { DummyComponent } from './dummy/dummy.component';
-import { TitleComponent } from './title/title.component';
 import { CitationComponent } from './citation/citation.component';
 import { OurjobComponent } from './ourjob/ourjob.component';
+import { BookComponent } from './book/book.component';
+
+import { AppService } from 'src/services/app.service';
+import { ConfigService } from 'src/services/config.service';
+import { WINDOW_PROVIDERS } from "src/services/window.service";
 
 
 @NgModule({
@@ -17,15 +18,18 @@ import { OurjobComponent } from './ourjob/ourjob.component';
     AppComponent,
     MenuComponent,
     HomeComponent,
-    DummyComponent,
-    TitleComponent,
     CitationComponent,
-    OurjobComponent
+    OurjobComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [AppService],
+  providers: [
+    AppService,
+    ConfigService,
+    WINDOW_PROVIDERS
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

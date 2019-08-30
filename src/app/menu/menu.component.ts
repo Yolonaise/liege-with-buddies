@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { AppService } from 'src/services/app.service';
 import { IMenu } from 'src/Interface/menu.interface';
+import { element } from 'protractor';
+import { IScrollListener } from 'src/Interface/scrolllistener.interface';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +11,7 @@ import { IMenu } from 'src/Interface/menu.interface';
 })
 export class MenuComponent implements OnInit {
 
-  menus: IMenu[] = [];
+  menus: any[] = [];
 
   constructor(private appService: AppService) {
     appService.setMenu(this);
@@ -39,5 +41,34 @@ export class MenuComponent implements OnInit {
       return;
 
     element.scrollIntoView({ behavior: 'smooth', block: "start" });
+  }
+
+  isOnScreen(sl: IScrollListener) {
+    if (!this.isMenu(sl))
+      return;
+
+    let found = false;
+    this.menus.forEach(m => {
+      if (this.isScrollListenner(m) && this.isMenu(m) && sl.htmlId == m.htmlId) {
+        found = true;
+      }
+    });
+
+    if (!found)
+      return;
+
+    this.menus.forEach(m => {
+      if (this.isScrollListenner(m) && this.isMenu(m)) {
+        m.isOnScreen = sl.htmlId === m.htmlId;
+      }
+    });
+  }
+
+  isScrollListenner(object: any): object is IScrollListener {
+    return object;
+  }
+
+  isMenu(object: any): object is IMenu {
+    return object;
   }
 }

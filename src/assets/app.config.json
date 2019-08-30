@@ -1,0 +1,21 @@
+{
+    "instagram": {
+        "clientId": "72811bf5ff6741e99da8ab2f04ab918d",
+        "clientSecret": " ff5a7dc8a0364313a516db26cf600cce",
+        "clientStatus": "Sandbox Mode"
+    },
+    "externalBookers": [
+        {
+            "name": "Free Tour",
+            "link": "https://www.freetour.com/liege/free-walking-tour-liege"
+        },
+        {
+            "name": "TripAdvisor",
+            "link": "https://fr.tripadvisor.be/Attraction_Review-g188655-d17585826-Reviews-Liege_Free_Walking_Tours-Liege_Liege_Province_The_Ardennes_Wallonia.html"
+        },
+        {
+            "name": "Facebook",
+            "link": "https://www.facebook.com/LiegeFreeWalkingTours/"
+        }
+    ]
+}
