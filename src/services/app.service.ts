@@ -46,4 +46,12 @@ export class AppService {
     notifyFeatureOnScreen(sl: IScrollListener) {
         this.menu.isOnScreen(sl);
     }
+
+    scrollToNext(m: IMenu) {
+        for (let i = 0; i < this.menu.menus.length - 2; i++) {
+            if(m.htmlId == this.menu.menus[i].htmlId){
+                this.menu.scrollTo(this.menu.menus[i + 1]);
+            }
+        }
+    }
 }

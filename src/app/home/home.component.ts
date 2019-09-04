@@ -42,4 +42,8 @@ export class HomeComponent implements OnInit, IMenu, IScrollListener {
       }
     });
   }
+
+  onArrowClick(){
+    this.appService.scrollToNext(this);
+  }
 }
