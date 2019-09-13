@@ -1,8 +1,9 @@
 <div class="main-container" [id]="this.htmlId" (scroll)="onscrollevent($event)">
-    <div class="layer layer1" data-type="parallax" data-depth="0.3"></div>
+    <div class="layer layer1" data-type="parallax" data-depth="-0.1"></div>
     <div class="layer layer2">
         <div class="square">
-            <svg width="100%" height="100%" data-type="parallax" data-depth="0.67">
+            <svg width="100%" height="100%" data-type="parallax" data-depth="-0.1" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="600">
                 <rect width="100%" height="100%" style="fill:transparent;stroke-width:20;stroke:#ffffffaa" />
             </svg>
             <div class="layer">
@@ -10,7 +11,7 @@
                     <div class="logo layer2">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="25vh" height="25vh"
-                            data-type="parallax" data-depth="0.7">
+                            data-type="parallax" data-depth="-0.1">
                             <defs>
                                 <path d="" id="bOA0cQDR4" />
                                 <path d="" id="avwTnKI4A" />
@@ -93,20 +94,20 @@
             </div>
             <div class="layer layer4">
                 <div class="over-title">
-                    <p data-type="parallax" data-depth="0.72">
-                        <i data-aos="fade-up" data-aos-duration="1000">Discover </i>
-                        <b data-aos="fade-up" data-aos-duration="1000">Liege </b>
-                        <u data-aos="fade-up" data-aos-duration="1000">With nice buddies</u></p>
+                    <p data-type="parallax" data-depth="-0.05">
+                        <i data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">Discover </i>
+                        <b data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Liege </b>
+                        <u data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">With nice buddies</u></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="layer layerArrow" data-type="parallax" data-depth="0.8">
+    <div class="layer layerArrow" (click)="onArrowClick()">
         <div class="arrow">
             <svg viewBox="0 0 24 24" width="100%" height="100%" stroke="#ffffffaa" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="1000" (click)="onArrowClick()">
+                data-aos-delay="1000">
                 <polyline points="7 13 12 18 17 13"></polyline>
                 <polyline points="7 6 12 11 17 6"></polyline>
             </svg>

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { Component, OnInit, HostListener, Inject, Input, AfterViewInit } from '@angular/core';
 import { IMenu } from 'src/Interface/menu.interface';
 
 import * as uuid from 'uuid';
@@ -13,11 +13,28 @@ import { ScrollHelper } from 'src/Helper/scroll.helper';
   templateUrl: './citation.component.html',
   styleUrls: ['./citation.component.scss']
 })
-export class CitationComponent implements OnInit, IMenu, IScrollListener {
-  loaded: boolean = false;
-  htmlId: string = uuid.v4();;
-  name: string = "Liege";
-  isOnScreen: boolean = false;
+export class CitationComponent implements OnInit, AfterViewInit, IMenu, IScrollListener {
+  loaded = false;
+  htmlId: string = uuid.v4();
+  name = 'Liege';
+  isOnScreen = false;
+
+  @Input() thingsToDo: [{
+    name: 'Prince-évêques',
+    types: ['Palace']
+  }, {
+    name: 'Vieux Liège & impasses',
+    types: ['Place', 'Street']
+  }, {
+    name: 'Violette',
+    types: ['Town Hall']
+  }, {
+    name: 'Marches de Bueren',
+    types: ['Place', 'Street']
+  }, {
+    name: 'Place Saint Lambert',
+    types: ['Place']
+  }];
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -30,14 +47,14 @@ export class CitationComponent implements OnInit, IMenu, IScrollListener {
   }
 
   ngAfterViewInit() {
-    this.appService.featureLoaded(this)
+    this.appService.featureLoaded(this);
   }
 
   @HostListener('window:scroll', ['$event'])
   onscrollevent(event: any): void {
     ScrollHelper.isOnScreenById(this.htmlId, (v) => {
       if (v && !this.isOnScreen) {
-        console.log(this.name + "is visible");
+        console.log(this.name + 'is visible');
         this.appService.notifyFeatureOnScreen(this);
       }
     });
