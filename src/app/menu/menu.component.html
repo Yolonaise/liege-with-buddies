@@ -2,7 +2,8 @@
     <ul>
         <li *ngFor="let m of menus">
             <a (click)="scrollTo(m.htmlId)">{{ m.name }}</a>
-            <div *ngIf="m.isOnScreen" style="background: #35383966; height: 3px; width: 55%"></div>
+            <div *ngIf="m.isOnScreen"
+                style="background: #35383966; height: 3px; width: 100%; margin-left: 10%; margin-right: 50px"></div>
         </li>
     </ul>
 </header>
